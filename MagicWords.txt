@@ -1,0 +1,17 @@
+Magic Words For Unity Networking:
+
+using.UnityEngine.Network
+
+NetworkBehaviour
+
+isLocalPlayer
+isServer
+
+[Command]
+
+NetworkServer.Spawn(instance);
+
+[SyncVar[hook=“FunctionName”)]
+(This brings things to other clients)
+
+[ClientRPC]
