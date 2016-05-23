@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{6FB8240B-1EA9-F094-EA07-1C69F2118E75}") = "NarratusGame", "Assembly-CSharp.csproj", "{855AE5FB-AEB8-C02D-C9B9-26AA982B9203}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{855AE5FB-AEB8-C02D-C9B9-26AA982B9203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855AE5FB-AEB8-C02D-C9B9-26AA982B9203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855AE5FB-AEB8-C02D-C9B9-26AA982B9203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855AE5FB-AEB8-C02D-C9B9-26AA982B9203}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
