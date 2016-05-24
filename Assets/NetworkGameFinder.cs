@@ -9,9 +9,6 @@ using UnityEngine.UI;
 
 public class NetworkGameFinder : NetworkDiscovery {
 
-    // StatusText is the text status of the network finding process
-    public Text StatusText;
-
     // didInit is true if NetworkDiscovery.Initialize() was called
     private bool didInit = false;
 
@@ -23,20 +20,20 @@ public class NetworkGameFinder : NetworkDiscovery {
     // StartHosting starts hosting a game with a certain tag, returns True if broadcast successful
     public bool StartHosting(string tag) {
         this.broadcastData = tag;
-        this.verifyInit();
+        this.VerifyInit();
 
         return this.StartAsServer();
     }
 
     // StartListening starts accepting game broadcasts
     public bool StartListening() {
-        this.verifyInit();
+        this.VerifyInit();
 
         return this.StartAsClient();
     }
 
     // VerifyInit will initialize the network finder if it hasn't done so already
-    private void verifyInit() {
+    private void VerifyInit() {
         if (this.didInit == true) {
             return;
         }
