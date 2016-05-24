@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{AE6251E7-E058-ED79-92ED-178BE5427475}") = "Narratus", "Assembly-CSharp.csproj", "{3F0E2291-4CAA-F410-187D-088FC71C7DA8}"
+Project("{7033812D-625D-0437-FAD3-8AAE61D2F541}") = "narratus", "Assembly-CSharp.csproj", "{D45CFB7A-EAFF-6DB0-86FC-E848D3619FD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F0E2291-4CAA-F410-187D-088FC71C7DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F0E2291-4CAA-F410-187D-088FC71C7DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F0E2291-4CAA-F410-187D-088FC71C7DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F0E2291-4CAA-F410-187D-088FC71C7DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45CFB7A-EAFF-6DB0-86FC-E848D3619FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45CFB7A-EAFF-6DB0-86FC-E848D3619FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45CFB7A-EAFF-6DB0-86FC-E848D3619FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45CFB7A-EAFF-6DB0-86FC-E848D3619FD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
