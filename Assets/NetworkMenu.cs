@@ -32,6 +32,12 @@ public class NetworkMenu : MonoBehaviour {
     // Finder is the game's network finder
     public NetworkGameFinder finder;
 
+    // gameItemPrefab is the prefab used for game items
+    public NetworkGame gameItemPrefab;
+
+    // gameList is the scroll rect that contains the available games
+    public ScrollRect gameList;
+
     // Start sets up the initial menu state
     public void Start() {
         if(hostButton != null) {
@@ -55,6 +61,10 @@ public class NetworkMenu : MonoBehaviour {
         if(startCancelGroup != null) {
             startCancelGroup.alpha = 0;
             startCancelGroup.blocksRaycasts = false;
+        }
+
+        if(finder != null) {
+            finder.gameFindListener = AddAvailableGame;
         }
     }
 
@@ -101,6 +111,18 @@ public class NetworkMenu : MonoBehaviour {
         }
 
         ShowHostJoin();
+    }
+
+    // AddAvailableGame adds a locally available game to the menu list
+    public void AddAvailableGame(string address, string data) {
+        statusText.text += "\nGame Available: " + data + " (" + address + ")";
+        if(gameItemPrefab == null || gameList == null) return;
+
+        NetworkGame game = (NetworkGame)Instantiate(gameItemPrefab);
+        game.gameName = data;
+        game.hostAddress = address;
+        
+        game.transform.SetParent(gameList.content);
     }
 
     // HideHostJoin hides the host and join controls
