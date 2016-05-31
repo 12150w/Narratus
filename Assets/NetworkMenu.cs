@@ -118,7 +118,7 @@ public class NetworkMenu : MonoBehaviour {
         statusText.text += "\nGame Available: " + data + " (" + address + ")";
         if(gameItemPrefab == null || gameList == null) return;
 
-        NetworkGame game = (NetworkGame)Instantiate(gameItemPrefab);
+        NetworkGame game = Instantiate(gameItemPrefab);
         game.gameName = data;
         game.hostAddress = address;
         
