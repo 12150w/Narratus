@@ -20,4 +20,15 @@ public class NetworkGame : MonoBehaviour {
     // nameText is the text for the game name
     public Text nameText;
 
+    // menu is the NetworkMenu instance that created this game
+    public NetworkMenu menu;
+
+    // Join will connect to the game, creating a GameClient
+    public void Join() {
+        GameClient client = GameClient.CreateInstance<GameClient>();
+        NetworkMenu.client = client;
+
+        client.Join(this);
+    }
+
 }

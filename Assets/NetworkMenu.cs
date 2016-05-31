@@ -1,7 +1,8 @@
 ﻿/*
  * Network Menu
  * 
- * Controls the main network menu
+ * This class controls the main network menu.
+ * The GameServer and GameClient are started from here.
  */
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,6 +39,12 @@ public class NetworkMenu : MonoBehaviour {
     // gameList is the scroll rect that contains the available games
     public ScrollRect gameList;
 
+    // server is the GameServer if running as a host
+    public static GameServer server;
+
+    // client is the GameClient if running as client
+    public static GameClient client;
+
     // Start sets up the initial menu state
     public void Start() {
         if(hostButton != null) {
@@ -66,6 +73,9 @@ public class NetworkMenu : MonoBehaviour {
         if(finder != null) {
             finder.gameFindListener = AddAvailableGame;
         }
+
+        // setup the GameServer
+        server = GameServer.CreateInstance<GameServer>();
     }
 
     // ValidateHost checks if the menu is set up to host a game
@@ -85,6 +95,8 @@ public class NetworkMenu : MonoBehaviour {
             Debug.LogError("Failed to start hosting game");
             return;
         }
+
+        server.Listen();
 
         statusText.text = "Hosting \"" + gameName.text + "\"";
         HideHostJoin();
